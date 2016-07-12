@@ -1,0 +1,271 @@
+REST resources of project:
+0.1-SNAPSHOT
+
+GET rest/complex:
+ Request:
+  No body
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 200
+   Response Body: Collection of java.lang.String
+    ["string"]
+
+
+POST rest/complex/anotherSub:
+ Request:
+  Content-Type: */*
+  Request Body: java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 202
+   Header: X-Info
+
+
+GET rest/complex/anotherSub/{name}:
+ Request:
+  No body
+  Path Param: name, java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+POST rest/complex/anotherSubres:
+ Request:
+  Content-Type: */*
+  Request Body: java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 202
+   Header: X-Info
+
+
+GET rest/complex/anotherSubres/{name}:
+ Request:
+  No body
+  Path Param: name, java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+GET rest/complex/status:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+GET rest/complex/string:
+ Request:
+  No body
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+POST rest/complex/sub:
+ Request:
+  Content-Type: */*
+  Request Body: java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 202
+   Header: X-Info
+
+
+GET rest/complex/sub/{name}:
+ Request:
+  No body
+  Path Param: name, java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+GET rest/complex/{info}:
+ Request:
+  No body
+  Path Param: info, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Header: X-Info
+
+
+GET rest/json_tests:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    {"duke":0.0,"key":"string"}
+
+
+POST rest/json_tests:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    ["string"]
+
+  Status Codes: 202
+   Response Body: javax.json.Json
+    {"key":"string"}
+
+  Status Codes: 500
+
+
+GET rest/json_tests/info:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    {"duke":"string","hello":"string","key":"string"}
+
+
+POST rest/subsub:
+ Request:
+  Content-Type: */*
+  Request Body: java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 202
+   Header: X-Info
+
+
+GET rest/subsub/{name}:
+ Request:
+  No body
+  Path Param: name, java.lang.String
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+GET rest/test:
+ Request:
+  No body
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 200
+   Response Body: Collection of Lcom.sebastian_daschner.project.Model
+    [{"id":0,"name":"string"}]
+
+
+PUT rest/test:
+ Request:
+  Content-Type: application/json
+  Request Body: com.sebastian_daschner.project.Model
+   {"id":0,"name":"string"}
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 202
+
+
+POST rest/test:
+ Request:
+  Content-Type: application/json
+  Request Body: java.lang.String
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 201
+   Header: Location
+
+
+GET rest/test/test:
+ Request:
+  No body
+
+ Response:
+  Content-Type: text/plain
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+DELETE rest/test/{foobar}:
+ Request:
+  No body
+  Path Param: foobar, java.lang.String
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 204
+
+
+GET rest/test/{id}:
+ Request:
+  No body
+  Path Param: id, java.lang.String
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 200
+   Response Body: com.sebastian_daschner.project.Model
+    {"id":0,"name":"string"}
+
+
+DELETE rest/test/{id}:
+ Request:
+  No body
+  Path Param: id, java.lang.String
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 204
+
+  Status Codes: 404
+   Header: X-Message
+
+  Status Codes: 500
+
+
+DELETE rest/test/{id}/test:
+ Request:
+  No body
+  Path Param: id, java.lang.String
+  Query Param: query, int
+
+ Response:
+  Content-Type: application/json
+  Status Codes: 204
+
+

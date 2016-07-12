@@ -1,0 +1,4 @@
+= JAX-RS Analyzer system test
+
+This system test verifies the correct functionality of both the build JAX-RS Analyzer Maven plugin and the standalone version.
+The tests rely that the Maven is installed and configured.

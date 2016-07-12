@@ -1,0 +1,20 @@
+{
+  "mavenRepository": "~/.m2/repository",
+  "version": "0.10-SNAPSHOT",
+  "scenarios": [
+    {
+      "backend": "swagger",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "classPath":""
+    },
+    {
+      "backend": "plaintext",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "classPath":""
+    }
+  ]
+}
