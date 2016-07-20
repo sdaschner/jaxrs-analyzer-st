@@ -117,5 +117,4 @@ function getBackendFileName(backend) {
 
 function cleanUp(actualFile) {
     Files.delete(Paths.get(actualFile));
-    Files.delete(Paths.get("project/pom.xml"));
 }
