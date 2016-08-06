@@ -1,4 +1,16 @@
 = JAX-RS Analyzer system test
 
 This system test verifies the correct functionality of both the build JAX-RS Analyzer Maven plugin and the standalone version.
-The tests rely that the Maven is installed and configured.
+
+== Config
+The configuration is done in `config.json`.
+That file contains Maven's repository location, the used version for the JAX-RS analyzer and the test scenario setup including all options for the runs.
+
+The test scenarios are tested against the files under `scenarios/`.
+The scenario configuration done in `config.json` requires that the files `xx_expected` -- with `xx` as the index (two digits with leading zero) -- exist.
+
+== Run
+Run by executing `./run-test.sh`. Requires the Nashorn scripting engine (`jjs`).
+
+== Extend
+Extend the scenarios array in `config.json` and create new files under `scenarios/` accordingly.

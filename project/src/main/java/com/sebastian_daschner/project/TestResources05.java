@@ -27,11 +27,11 @@ import javax.ws.rs.core.Response;
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Path("json_tests")
-public class JsonResources {
+@Path("test05")
+public class TestResources05 {
 
     @GET
-    public JsonObject getJson() {
+    public JsonObject get() {
         return Json.createObjectBuilder().add("key", "value").add("duke", 42).build();
     }
 
@@ -44,9 +44,9 @@ public class JsonResources {
         return Response.ok(Json.createArrayBuilder().add("duke").add(42).build()).build();
     }
 
-    @Path("info")
     @GET
-    public Response getInfo() {
+    @Path("01")
+    public Response get01() {
         return Response.ok(Json.createObjectBuilder().add("key", "value").add("duke", "42").add("hello", "world")).build();
     }
 

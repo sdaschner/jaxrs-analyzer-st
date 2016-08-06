@@ -16,22 +16,34 @@
 
 package com.sebastian_daschner.project;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
-public @interface Test {
+@Path("04")
+public class TestResources04 implements Resources02 {
 
-    public static final String STATIC_STRING = "123";
+    private final String name;
 
-    String value() default "value";
+    @QueryParam("query")
+    private String query;
 
-    int test();
+    public TestResources04(final String name) {
+        this.name = name;
+    }
+
+    @POST
+    public Response post(final String entity) {
+        System.out.println("posted new: " + entity + " q: " + query);
+        return Response.accepted().header("X-Info", "Added " + entity).build();
+    }
+
+    @GET
+    @Path("{id}")
+    public String getId(@PathParam("id") final String id) {
+        return this.name + id;
+    }
 
 }

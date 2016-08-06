@@ -16,9 +16,16 @@
 
 package com.sebastian_daschner.project;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-public interface SomeSubResource {
-    // just a marker interface
+public interface Resources01 {
+
+    @GET
+    @Path("01")
+    String get01();
+
 }

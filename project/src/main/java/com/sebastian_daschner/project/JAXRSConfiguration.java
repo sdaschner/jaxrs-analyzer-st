@@ -16,34 +16,13 @@
 
 package com.sebastian_daschner.project;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
 
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Path("subsub")
-public class SubResources implements SomeSubResource {
-
-    private final String name;
-
-    @QueryParam("query")
-    private String query;
-
-    public SubResources(final String name) {
-        this.name = name;
-    }
-
-    @GET
-    @Path("{name}")
-    public String getSub(@PathParam("name") final String name) {
-        return this.name + name;
-    }
-
-    @POST
-    public Response postSub(final String entity) {
-        System.out.println("posted new: " + entity + " q: " + query);
-        return Response.accepted().header("X-Info", "Added " + entity).build();
-    }
-
+@ApplicationPath("rest")
+public class JAXRSConfiguration extends Application {
+    // no configuration needed
 }

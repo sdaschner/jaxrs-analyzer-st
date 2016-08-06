@@ -23,10 +23,10 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "models")
-@NamedQuery(name = Model.FIND_ALL, query = "select m from Model m")
-public class Model {
+@NamedQuery(name = Model01.FIND_ALL, query = "select m from Model01 m")
+public class Model01 {
 
-    public static final String FIND_ALL = "Model.findAll";
+    public static final String FIND_ALL = "Model01.findAll";
 
     @Id
     @GeneratedValue
@@ -35,11 +35,11 @@ public class Model {
     @Basic(optional = false)
     private String name;
 
-    public Model() {
+    public Model01() {
         // nothing to do
     }
 
-    public Model(final String name) {
+    public Model01(final String name) {
         this.name = name;
     }
 
@@ -61,7 +61,7 @@ public class Model {
 
     @Override
     public String toString() {
-        return "Model{" +
+        return "Model01{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

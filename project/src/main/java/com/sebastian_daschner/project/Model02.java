@@ -16,16 +16,19 @@
 
 package com.sebastian_daschner.project;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-public interface Resources {
+public class Model02<T> {
 
-    @GET
-    @Path("status")
-    String getStatus();
+    private T data;
+
+    public T getData() {
+        return this.data;
+    }
+
+    public Model02(T data) {
+        this.data = data;
+    }
 
 }

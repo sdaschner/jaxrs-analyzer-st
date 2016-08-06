@@ -16,13 +16,9 @@
 
 package com.sebastian_daschner.project;
 
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@ApplicationPath("rest")
-public class RestActivator extends Application {
-    // no configuration needed
+public interface Resources02 {
+    // just a marker interface
 }

@@ -31,28 +31,18 @@ import java.util.ArrayList;
  * These sources are solely used for test purposes and not meant for deployment.
  */
 @Stateless
-@Path("complex")
-public class ComplexResources extends AbstractResources implements Resources {
+@Path("test03")
+public class TestResources03 extends AbstractResources01 implements Resources01 {
 
     @Context
     ResourceContext rc;
 
     @Inject
-    Manager<Integer> manager;
-
-    @Override
-    public Response getInfo(final String info) {
-        return Response.ok().header("X-Info", manager.getInstance(String.class, info.length()) + " is complex").build();
-    }
-
-    @Override
-    public String getStatus() {
-        return "status";
-    }
+    Manager01<Integer> manager;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public ArrayList<String> getStrings() {
+    public ArrayList<String> get() {
         final ArrayList<String> strings = new ArrayList<>();
         strings.add("hi");
         strings.add("hello");
@@ -60,28 +50,38 @@ public class ComplexResources extends AbstractResources implements Resources {
     }
 
     @Override
-    public String getString() {
+    public Response getId(final String id) {
+        return Response.ok().header("X-Info", manager.getInstance(String.class, id.length()) + " is complex").build();
+    }
+
+    @Override
+    public String get01() {
+        return "status";
+    }
+
+    @Override
+    public String get02() {
         return "hello";
     }
 
-    @Path("sub")
-    public SomeSubResource subResources() {
+    @Path("03")
+    public Resources02 sub03() {
         return createSomeSubResource();
     }
 
-    private SomeSubResource createSomeSubResource() {
-        return new SubResources("complex");
+    @Path("04")
+    public Resources02 sub04() {
+        return rc.initResource(new TestResources04("foobar"));
     }
 
-    @Path("anotherSub")
-    public SomeSubResource anotherSubResource() {
-        return rc.initResource(new SubResources("complex"));
-    }
-
-    @Path("anotherSubres")
-    public SomeSubResource anotherSubresResource() {
+    @Path("05")
+    public Resources02 sub05() {
         // just for testing, this would fail due to missing default constructor
-        return rc.getResource(SubResources.class);
+        return rc.getResource(TestResources04.class);
+    }
+
+    private Resources02 createSomeSubResource() {
+        return new TestResources04("foobar");
     }
 
 }

@@ -22,7 +22,6 @@ import javax.persistence.EntityNotFoundException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -30,64 +29,28 @@ import java.util.logging.Logger;
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Path("/test")
+@Path("/test02")
 @Stateless
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class TestResources {
+public class TestResources02 {
 
     @Inject
-    private TestStore testStore;
-
-    @GET
-    @Path("test")
-    @Produces(MediaType.TEXT_HTML)
-    public Response test() {
-        return Response.ok("hi", MediaType.TEXT_PLAIN_TYPE).build();
-    }
-
-    @GET
-    public List<? extends Model> getModels() {
-        return this.testStore.getModels();
-    }
-
-    public <T extends Comparable<? super T>> T foobar() {return null;}
-
-    @POST
-    public Response simplePost(String string) {
-        final Model managedModel = this.testStore.getModel(string);
-
-        final URI uri = URI.create("/test/" + managedModel.getId());
-
-        return Response.created(uri).build();
-    }
-
-    @PUT
-    public Response put(final Model model) {
-        this.testStore.addModel(model);
-
-        return Response.accepted().build();
-    }
-
-    @DELETE
-    @Path("{foobar}")
-    public void deleteTest(@PathParam("foobar") final String foobar) {
-        Logger.getLogger("").info("deleted " + foobar);
-    }
+    private Manager02 manager;
 
     @GET
     @Path("{id}")
-    public Model getModel(@PathParam("id") final String id) {
+    public ModelResult getId(@PathParam("id") final String id) {
         synchronized (this) {
-            return this.testStore.getModel(id);
+            return new ModelResult(manager.getModel(id));
         }
     }
 
     @DELETE
     @Path("{id}")
-    public Response delete(@PathParam("id") final Map<String, List<String>> id) {
+    public Response deleteId(@PathParam("id") final Map<String, List<String>> id) {
         try {
-            this.testStore.delete("id");
+            this.manager.delete("id");
             return Response.noContent().build();
         } catch (EntityNotFoundException e) {
             return Response.status(Response.Status.NOT_FOUND).header("X-Message", "The entity with identifier " + id + " was not found.").build();
@@ -97,13 +60,19 @@ public class TestResources {
     }
 
     @DELETE
-    @Path("{id}/test")
-    public Response anotherDelete(@PathParam("id") final String id, @QueryParam("query") final int query) {
+    @Path("{id}/01")
+    public Response deleteId01(@PathParam("id") final String id, @QueryParam("query") final int query) {
         try {
-            this.testStore.delete(id);
+            this.manager.delete(id);
             return Response.noContent().build();
         } finally {
             Logger.getLogger("").info("deleted");
+        }
+    }
+
+    public static class ModelResult extends Model02<Model01> {
+        public ModelResult(Model01 data) {
+            super(data);
         }
     }
 

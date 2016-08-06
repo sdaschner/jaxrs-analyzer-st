@@ -17,28 +17,19 @@
 package com.sebastian_daschner.project;
 
 import javax.ejb.Stateless;
-import java.util.List;
 
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
 @Stateless
-public class TestStore {
+public class Manager01<T> {
 
-    public Model getModel(final String id) {
-        return null;
-    }
-
-    public String addModel(final Model model) {
-        return null;
-    }
-
-    public List<Model> getModels() {
-        return null;
-    }
-
-    public void delete(final String id) {
-        // do nothing
+    @SuppressWarnings("unchecked")
+    public <U> U getInstance(final Class<U> clazz, final T object) {
+        // some reflection magic
+        final T tObject = object;
+        final U uObject = (U) object;
+        return uObject;
     }
 
 }
