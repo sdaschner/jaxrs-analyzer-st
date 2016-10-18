@@ -7,14 +7,42 @@
       "deployedDomain": "",
       "swaggerSchemes": "",
       "swaggerTagsPathOffset": "",
-      "classPath":""
+      "renderSwaggerTags": "false"
     },
     {
       "backend": "plaintext",
       "deployedDomain": "",
       "swaggerSchemes": "",
       "swaggerTagsPathOffset": "",
-      "classPath":""
+      "renderSwaggerTags": "false"
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "localhost:8080/example",
+      "swaggerSchemes": "https",
+      "swaggerTagsPathOffset": "1",
+      "renderSwaggerTags": "true"
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "localhost:8080/example",
+      "swaggerSchemes": "http,https",
+      "swaggerTagsPathOffset": "2",
+      "renderSwaggerTags": "true"
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "localhost:8080/example",
+      "swaggerSchemes": "http,https",
+      "swaggerTagsPathOffset": "3",
+      "renderSwaggerTags": "true"
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "localhost:8080/example",
+      "swaggerSchemes": "http,https",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": "true"
     }
   ]
 }
