@@ -281,3 +281,47 @@ GET rest/test05/01:
     {"duke":"string","hello":"string","key":"string"}
 
 
+GET rest/test06:
+ Request:
+  No body
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    {"duke":0.0,"key":"string"}
+
+
+POST rest/test06:
+ Request:
+  Content-Type: */*
+  Request Body: javax.json.JsonObject
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    ["string"]
+
+  Status Codes: 202
+   Response Body: javax.json.Json
+    {"key":"string"}
+
+  Status Codes: 500
+
+
+GET rest/test06/{id}:
+ Request:
+  No body
+  Path Param: id, long
+  Query Param: query, java.lang.String
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: javax.json.Json
+    {"duke":"string","hello":"string","key":"string"}
+
+

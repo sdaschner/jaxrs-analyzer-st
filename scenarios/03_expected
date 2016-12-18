@@ -722,6 +722,120 @@
                     "01"
                 ]
             }
+        },
+        "/test06":{
+            "get":{
+                "description":"Gets a test.",
+                "consumes":[
+                ],
+                "produces":[
+                ],
+                "parameters":[
+                    {
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
+                        },
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject"
+                        }
+                    }
+                }
+            },
+            "post":{
+                "description":"Creates a new test",
+                "consumes":[
+                ],
+                "produces":[
+                ],
+                "parameters":[
+                    {
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
+                    },
+                    {
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"object"
+                        },
+                        "description":"The body with parameters"
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
+                        },
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "type":"string"
+                            }
+                        }
+                    },
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
+                        },
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
+                        }
+                    },
+                    "500":{
+                        "description":"Internal Server Error",
+                        "headers":{
+                        }
+                    }
+                }
+            }
+        },
+        "/test06/{id}":{
+            "get":{
+                "description":"Returns a sub test.",
+                "consumes":[
+                ],
+                "produces":[
+                ],
+                "parameters":[
+                    {
+                        "type":"integer",
+                        "name":"id",
+                        "in":"path",
+                        "required":true,
+                        "description":"The sub identifier"
+                    },
+                    {
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
+                    }
+                ],
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
+                        },
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions":{
