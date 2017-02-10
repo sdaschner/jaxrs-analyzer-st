@@ -12,12 +12,24 @@
         "https"
     ],
     "tags":[
-        "04",
-        "test01",
-        "test02",
-        "test03",
-        "test05",
-        "test06"
+        {
+            "name":"04"
+        },
+        {
+            "name":"test01"
+        },
+        {
+            "name":"test02"
+        },
+        {
+            "name":"test03"
+        },
+        {
+            "name":"test05"
+        },
+        {
+            "name":"test06"
+        }
     ],
     "paths":{
         "/04":{
