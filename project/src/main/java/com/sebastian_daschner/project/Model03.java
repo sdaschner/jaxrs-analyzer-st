@@ -16,39 +16,28 @@
 
 package com.sebastian_daschner.project;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.Response;
-
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Path("04")
-public class TestResources04 implements Resources02 {
+public class Model03 {
 
-    private final String name;
+    private String name;
+    private Model03 child;
 
-    @QueryParam("query")
-    private String query;
+    public String getName() {
+        return name;
+    }
 
-    public TestResources04(final String name) {
+    public void setName(final String name) {
         this.name = name;
     }
 
-    /**
-     * Posts a new entity.
-     *
-     * @param entity The entity
-     */
-    @POST
-    public Response post(final String entity) {
-        System.out.println("posted new: " + entity + " q: " + query);
-        return Response.accepted().header("X-Info", "Added " + entity).build();
+    public Model03 getChild() {
+        return child;
     }
 
-    @GET
-    @Path("{id}")
-    public String getId(@PathParam("id") final String id) {
-        return this.name + id;
+    public void setChild(final Model03 child) {
+        this.child = child;
     }
 
 }

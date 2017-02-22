@@ -38,6 +38,11 @@ public class TestResources02 {
     @Inject
     private Manager02 manager;
 
+    /**
+     * Returns the model result.
+     *
+     * @param id The path param
+     */
     @GET
     @Path("{id}")
     public ModelResult getId(@PathParam("id") final String id) {

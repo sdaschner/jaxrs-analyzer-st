@@ -16,39 +16,42 @@
 
 package com.sebastian_daschner.project;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.container.ResourceContext;
+import javax.ws.rs.core.Context;
 
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-@Path("04")
-public class TestResources04 implements Resources02 {
+@Path("test07")
+public class TestResources07 {
 
-    private final String name;
+    @Context
+    ResourceContext rc;
 
-    @QueryParam("query")
-    private String query;
-
-    public TestResources04(final String name) {
-        this.name = name;
+    @GET
+    public Model03 get() {
+        final Model03 model03 = new Model03();
+        model03.setChild(new Model03());
+        model03.setName("foo");
+        return model03;
     }
 
     /**
-     * Posts a new entity.
-     *
-     * @param entity The entity
+     * This should be ignored.
      */
-    @POST
-    public Response post(final String entity) {
-        System.out.println("posted new: " + entity + " q: " + query);
-        return Response.accepted().header("X-Info", "Added " + entity).build();
+    @Path("01")
+    public SubResources01 sub01() {
+        return rc.getResource(SubResources01.class);
     }
 
-    @GET
-    @Path("{id}")
-    public String getId(@PathParam("id") final String id) {
-        return this.name + id;
+    /**
+     * This should be ignored.
+     */
+    @Path("02")
+    public SubResources02 sub02() {
+        return rc.getResource(SubResources02.class);
     }
 
 }

@@ -1,0 +1,388 @@
+= REST resources of project
+0.1-SNAPSHOT
+
+== `POST rest/04`
+
+=== Request
+*Content-Type*: `\*/*` + 
+*Request Body*: (`java.lang.String`) + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `202 Accepted`
+*Header*: `X-Info` + 
+
+== `GET rest/04/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `GET rest/test01`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (Collection of `Lcom.sebastian_daschner.project.Model01`) + 
+`[{"id":0,"name":"string"}]` + 
+
+== `PUT rest/test01`
+
+=== Request
+*Content-Type*: `application/json` + 
+*Request Body*: (`com.sebastian_daschner.project.Model01`) + 
+`{"id":0,"name":"string"}` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `202 Accepted`
+
+== `POST rest/test01`
+
+=== Request
+*Content-Type*: `application/json` + 
+*Request Body*: (`java.lang.String`) + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `201 Created`
+*Header*: `Location` + 
+
+== `GET rest/test01/01`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `text/plain`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `GET rest/test01/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`com.sebastian_daschner.project.Model01`) + 
+`{"id":0,"name":"string"}` + 
+
+== `DELETE rest/test01/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `204 No Content`
+
+== `GET rest/test02/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`com.sebastian_daschner.project.TestResources02$ModelResult`) + 
+`{"data":{}}` + 
+
+== `DELETE rest/test02/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `204 No Content`
+
+==== `404 Not Found`
+*Header*: `X-Message` + 
+
+==== `500 Internal Server Error`
+
+== `DELETE rest/test02/{id}/01`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+*Query Param*: `query`, `int` + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `204 No Content`
+
+== `GET rest/test03`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (Collection of `java.lang.String`) + 
+`["string"]` + 
+
+== `GET rest/test03/01`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `GET rest/test03/02`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `application/json`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `POST rest/test03/03`
+
+=== Request
+*Content-Type*: `\*/*` + 
+*Request Body*: (`java.lang.String`) + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `202 Accepted`
+*Header*: `X-Info` + 
+
+== `GET rest/test03/03/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `POST rest/test03/04`
+
+=== Request
+*Content-Type*: `\*/*` + 
+*Request Body*: (`java.lang.String`) + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `202 Accepted`
+*Header*: `X-Info` + 
+
+== `GET rest/test03/04/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `POST rest/test03/05`
+
+=== Request
+*Content-Type*: `\*/*` + 
+*Request Body*: (`java.lang.String`) + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `202 Accepted`
+*Header*: `X-Info` + 
+
+== `GET rest/test03/05/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `GET rest/test03/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Header*: `X-Info` + 
+
+== `GET rest/test05`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`{"duke":0.0,"key":"string"}` + 
+
+== `POST rest/test05`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`["string"]` + 
+
+==== `202 Accepted`
+*Response Body*: (`javax.json.Json`) + 
+`{"key":"string"}` + 
+
+==== `500 Internal Server Error`
+
+== `GET rest/test05/01`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`{"duke":"string","hello":"string","key":"string"}` + 
+
+== `GET rest/test06`
+
+=== Request
+_No body_ + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`{"duke":0.0,"key":"string"}` + 
+
+== `POST rest/test06`
+
+=== Request
+*Content-Type*: `\*/*` + 
+*Request Body*: (`javax.json.JsonObject`) + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`["string"]` + 
+
+==== `202 Accepted`
+*Response Body*: (`javax.json.Json`) + 
+`{"key":"string"}` + 
+
+==== `500 Internal Server Error`
+
+== `GET rest/test06/{id}`
+
+=== Request
+_No body_ + 
+*Path Param*: `id`, `long` + 
+*Query Param*: `query`, `java.lang.String` + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`javax.json.Json`) + 
+`{"duke":"string","hello":"string","key":"string"}` + 
+
+== `GET rest/test07`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`com.sebastian_daschner.project.Model03`) + 
+`{"child":{},"name":"string"}` + 
+
+== `GET rest/test07/01`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+
+== `GET rest/test07/02`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (`java.lang.String`) + 
+

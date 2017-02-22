@@ -43,6 +43,13 @@
       "swaggerSchemes": "http,https",
       "swaggerTagsPathOffset": "",
       "renderSwaggerTags": "true"
+    },
+    {
+      "backend": "asciidoc",
+      "deployedDomain": "localhost:8080/example",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": "false"
     }
   ]
 }

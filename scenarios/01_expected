@@ -13,6 +13,7 @@
     "paths": {
         "/04": {
             "post": {
+                "description": "Posts a new entity.",
                 "consumes": [
                 ],
                 "produces": [
@@ -30,7 +31,8 @@
                         "required": true,
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The entity"
                     }
                 ],
                 "responses": {
@@ -230,6 +232,7 @@
         },
         "/test02/{id}": {
             "get": {
+                "description": "Returns the model result.",
                 "consumes": [
                     "application/json"
                 ],
@@ -241,7 +244,8 @@
                         "type": "string",
                         "name": "id",
                         "in": "path",
-                        "required": true
+                        "required": true,
+                        "description": "The path param"
                     }
                 ],
                 "responses": {
@@ -390,6 +394,7 @@
         },
         "/test03/03": {
             "post": {
+                "description": "Posts a new entity.",
                 "consumes": [
                 ],
                 "produces": [
@@ -407,7 +412,8 @@
                         "required": true,
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The entity"
                     }
                 ],
                 "responses": {
@@ -456,6 +462,7 @@
         },
         "/test03/04": {
             "post": {
+                "description": "Posts a new entity.",
                 "consumes": [
                 ],
                 "produces": [
@@ -473,7 +480,8 @@
                         "required": true,
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The entity"
                     }
                 ],
                 "responses": {
@@ -522,6 +530,7 @@
         },
         "/test03/05": {
             "post": {
+                "description": "Posts a new entity.",
                 "consumes": [
                 ],
                 "produces": [
@@ -539,7 +548,8 @@
                         "required": true,
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The entity"
                     }
                 ],
                 "responses": {
@@ -799,6 +809,67 @@
                     }
                 }
             }
+        },
+        "/test07": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Model03"
+                        }
+                    }
+                }
+            }
+        },
+        "/test07/01": {
+            "get": {
+                "description": "Returns something.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test07/02": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -833,6 +904,16 @@
             "properties": {
                 "id": {
                     "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Model03": {
+            "properties": {
+                "child": {
+                    "$ref": "#/definitions/Model03"
                 },
                 "name": {
                     "type": "string"

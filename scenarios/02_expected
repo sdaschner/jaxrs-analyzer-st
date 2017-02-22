@@ -325,3 +325,34 @@ GET rest/test06/{id}:
     {"duke":"string","hello":"string","key":"string"}
 
 
+GET rest/test07:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: com.sebastian_daschner.project.Model03
+    {"child":{},"name":"string"}
+
+
+GET rest/test07/01:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+
+GET rest/test07/02:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: java.lang.String
+
+

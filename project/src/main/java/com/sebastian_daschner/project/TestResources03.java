@@ -64,6 +64,9 @@ public class TestResources03 extends AbstractResources01 implements Resources01 
         return "hello";
     }
 
+    /**
+     * A sub resource. This comment should be ignored.
+     */
     @Path("03")
     public Resources02 sub03() {
         return createSomeSubResource();
