@@ -1,938 +1,938 @@
 
 {
-    "swagger": "2.0",
-    "info": {
-        "version": "0.1-SNAPSHOT",
-        "title": "project"
+    "swagger":"2.0",
+    "info":{
+        "version":"0.1-SNAPSHOT",
+        "title":"project"
     },
-    "host": "localhost:8080/example",
-    "basePath": "/rest",
-    "schemes": [
+    "host":"localhost:8080/example",
+    "basePath":"/rest",
+    "schemes":[
         "http",
         "https"
     ],
-    "tags": [
+    "tags":[
         {
-            "name": "01"
+            "name":"01"
         }
     ],
-    "paths": {
-        "/04": {
-            "post": {
-                "description": "Posts a new entity.",
-                "consumes": [
+    "paths":{
+        "/04":{
+            "post":{
+                "description":"Posts a new entity.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     },
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
                         },
-                        "description": "The entity"
+                        "description":"The entity"
                     }
                 ],
-                "responses": {
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
-                            "X-Info": {
-                                "type": "string"
+                "responses":{
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
+                            "X-Info":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/04/{id}": {
-            "get": {
-                "consumes": [
+        "/04/{id}":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     },
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test01": {
-            "get": {
-                "consumes": [
+        "/test01":{
+            "get":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "$ref": "#/definitions/Model01"
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "$ref":"#/definitions/Model01"
                             }
                         }
                     }
                 }
             },
-            "put": {
-                "consumes": [
+            "put":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/Model01_2"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "$ref":"#/definitions/Model01_2"
                         }
                     }
                 ],
-                "responses": {
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
+                "responses":{
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
                         }
                     }
                 }
             },
-            "post": {
-                "consumes": [
+            "post":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 ],
-                "responses": {
-                    "201": {
-                        "description": "Created",
-                        "headers": {
-                            "Location": {
-                                "type": "string"
+                "responses":{
+                    "201":{
+                        "description":"Created",
+                        "headers":{
+                            "Location":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test01/01": {
-            "get": {
-                "consumes": [
+        "/test01/01":{
+            "get":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "text/plain"
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test01/{id}": {
-            "get": {
-                "consumes": [
+        "/test01/{id}":{
+            "get":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/Model01_2"
+                        "schema":{
+                            "$ref":"#/definitions/Model01_2"
                         }
                     }
                 }
             },
-            "delete": {
-                "consumes": [
+            "delete":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {
+                "responses":{
+                    "204":{
+                        "description":"No Content",
+                        "headers":{
                         }
                     }
                 }
             }
         },
-        "/test02/{id}": {
-            "get": {
-                "description": "Returns the model result.",
-                "consumes": [
+        "/test02/{id}":{
+            "get":{
+                "description":"Returns the model result.",
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "The path param"
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true,
+                        "description":"The path param"
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/TestResources02$ModelResult"
+                        "schema":{
+                            "$ref":"#/definitions/TestResources02$ModelResult"
                         }
                     }
                 }
             },
-            "delete": {
-                "consumes": [
+            "delete":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {
+                "responses":{
+                    "204":{
+                        "description":"No Content",
+                        "headers":{
                         }
                     },
-                    "404": {
-                        "description": "Not Found",
-                        "headers": {
-                            "X-Message": {
-                                "type": "string"
+                    "404":{
+                        "description":"Not Found",
+                        "headers":{
+                            "X-Message":{
+                                "type":"string"
                             }
                         }
                     },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "headers": {
+                    "500":{
+                        "description":"Internal Server Error",
+                        "headers":{
                         }
                     }
                 }
             }
         },
-        "/test02/{id}/01": {
-            "delete": {
-                "consumes": [
+        "/test02/{id}/01":{
+            "delete":{
+                "consumes":[
                     "application/json"
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     },
                     {
-                        "type": "integer",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"integer",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "204": {
-                        "description": "No Content",
-                        "headers": {
+                "responses":{
+                    "204":{
+                        "description":"No Content",
+                        "headers":{
                         }
                     }
                 },
-                "tags": [
+                "tags":[
                     "01"
                 ]
             }
         },
-        "/test03": {
-            "get": {
-                "consumes": [
+        "/test03":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test03/01": {
-            "get": {
-                "consumes": [
+        "/test03/01":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test03/02": {
-            "get": {
-                "consumes": [
+        "/test03/02":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                     "application/json"
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test03/03": {
-            "post": {
-                "description": "Posts a new entity.",
-                "consumes": [
+        "/test03/03":{
+            "post":{
+                "description":"Posts a new entity.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     },
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
                         },
-                        "description": "The entity"
+                        "description":"The entity"
                     }
                 ],
-                "responses": {
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
-                            "X-Info": {
-                                "type": "string"
+                "responses":{
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
+                            "X-Info":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test03/03/{id}": {
-            "get": {
-                "consumes": [
+        "/test03/03/{id}":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     },
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test03/04": {
-            "post": {
-                "description": "Posts a new entity.",
-                "consumes": [
+        "/test03/04":{
+            "post":{
+                "description":"Posts a new entity.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     },
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
                         },
-                        "description": "The entity"
+                        "description":"The entity"
                     }
                 ],
-                "responses": {
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
-                            "X-Info": {
-                                "type": "string"
+                "responses":{
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
+                            "X-Info":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test03/04/{id}": {
-            "get": {
-                "consumes": [
+        "/test03/04/{id}":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     },
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test03/05": {
-            "post": {
-                "description": "Posts a new entity.",
-                "consumes": [
+        "/test03/05":{
+            "post":{
+                "description":"Posts a new entity.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     },
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "string"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"string"
                         },
-                        "description": "The entity"
+                        "description":"The entity"
                     }
                 ],
-                "responses": {
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
-                            "X-Info": {
-                                "type": "string"
+                "responses":{
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
+                            "X-Info":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test03/05/{id}": {
-            "get": {
-                "consumes": [
+        "/test03/05/{id}":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     },
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test03/{id}": {
-            "get": {
-                "consumes": [
+        "/test03/{id}":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
+                        "type":"string",
+                        "name":"id",
+                        "in":"path",
+                        "required":true
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
-                            "X-Info": {
-                                "type": "string"
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
+                            "X-Info":{
+                                "type":"string"
                             }
                         }
                     }
                 }
             }
         },
-        "/test05": {
-            "get": {
-                "consumes": [
+        "/test05":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject"
                         }
                     }
                 }
             },
-            "post": {
-                "consumes": [
+            "post":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "type":"string"
                             }
                         }
                     },
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
                         }
                     },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "headers": {
+                    "500":{
+                        "description":"Internal Server Error",
+                        "headers":{
                         }
                     }
                 }
             }
         },
-        "/test05/01": {
-            "get": {
-                "consumes": [
+        "/test05/01":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
                         }
                     }
                 }
             }
         },
-        "/test06": {
-            "get": {
-                "description": "Gets a test.",
-                "consumes": [
+        "/test06":{
+            "get":{
+                "description":"Gets a test.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true,
-                        "description": "Query param to filter."
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject"
                         }
                     }
                 }
             },
-            "post": {
-                "description": "Creates a new test",
-                "consumes": [
+            "post":{
+                "description":"Creates a new test",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true,
-                        "description": "Query param to filter."
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
                     },
                     {
-                        "name": "body",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "type": "object"
+                        "name":"body",
+                        "in":"body",
+                        "required":true,
+                        "schema":{
+                            "type":"object"
                         },
-                        "description": "The body with parameters"
+                        "description":"The body with parameters"
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
+                        "schema":{
+                            "type":"array",
+                            "items":{
+                                "type":"string"
                             }
                         }
                     },
-                    "202": {
-                        "description": "Accepted",
-                        "headers": {
+                    "202":{
+                        "description":"Accepted",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
                         }
                     },
-                    "500": {
-                        "description": "Internal Server Error",
-                        "headers": {
+                    "500":{
+                        "description":"Internal Server Error",
+                        "headers":{
                         }
                     }
                 }
             }
         },
-        "/test06/{id}": {
-            "get": {
-                "description": "Returns a sub test.",
-                "consumes": [
+        "/test06/{id}":{
+            "get":{
+                "description":"Returns a sub test.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                     {
-                        "type": "integer",
-                        "name": "id",
-                        "in": "path",
-                        "required": true,
-                        "description": "The sub identifier"
+                        "type":"integer",
+                        "name":"id",
+                        "in":"path",
+                        "required":true,
+                        "description":"The sub identifier"
                     },
                     {
-                        "type": "string",
-                        "name": "query",
-                        "in": "query",
-                        "required": true,
-                        "description": "Query param to filter."
+                        "type":"string",
+                        "name":"query",
+                        "in":"query",
+                        "required":true,
+                        "description":"Query param to filter."
                     }
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                        "schema":{
+                            "$ref":"#/definitions/JsonObject_2"
                         }
                     }
                 }
             }
         },
-        "/test07": {
-            "get": {
-                "consumes": [
+        "/test07":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "$ref": "#/definitions/Model03"
+                        "schema":{
+                            "$ref":"#/definitions/Model03"
                         }
                     }
                 }
             }
         },
-        "/test07/01": {
-            "get": {
-                "description": "Returns something.",
-                "consumes": [
+        "/test07/01":{
+            "get":{
+                "description":"Returns something.",
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         },
-        "/test07/02": {
-            "get": {
-                "consumes": [
+        "/test07/02":{
+            "get":{
+                "consumes":[
                 ],
-                "produces": [
+                "produces":[
                 ],
-                "parameters": [
+                "parameters":[
                 ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "headers": {
+                "responses":{
+                    "200":{
+                        "description":"OK",
+                        "headers":{
                         },
-                        "schema": {
-                            "type": "string"
+                        "schema":{
+                            "type":"string"
                         }
                     }
                 }
             }
         }
     },
-    "definitions": {
-        "JsonObject": {
-            "properties": {
-                "duke": {
-                    "type": "number"
+    "definitions":{
+        "JsonObject":{
+            "properties":{
+                "duke":{
+                    "type":"number"
                 },
-                "key": {
-                    "type": "string"
+                "key":{
+                    "type":"string"
                 }
             }
         },
-        "JsonObject_2": {
-            "properties": {
-                "key": {
-                    "type": "string"
+        "JsonObject_2":{
+            "properties":{
+                "key":{
+                    "type":"string"
                 }
             }
         },
-        "Model01": {
-            "properties": {
-                "id": {
-                    "type": "integer"
+        "Model01":{
+            "properties":{
+                "id":{
+                    "type":"integer"
                 },
-                "name": {
-                    "type": "string"
+                "name":{
+                    "type":"string"
                 }
             }
         },
-        "Model01_2": {
-            "properties": {
-                "id": {
-                    "type": "integer"
+        "Model01_2":{
+            "properties":{
+                "id":{
+                    "type":"integer"
                 },
-                "name": {
-                    "type": "string"
+                "name":{
+                    "type":"string"
                 }
             }
         },
-        "Model03": {
-            "properties": {
-                "child": {
-                    "$ref": "#/definitions/Model03"
+        "Model03":{
+            "properties":{
+                "child":{
+                    "$ref":"#/definitions/Model03"
                 },
-                "name": {
-                    "type": "string"
+                "name":{
+                    "type":"string"
                 }
             }
         },
-        "TestResources02$ModelResult": {
-            "properties": {
-                "data": {
-                    "type": "object"
+        "TestResources02$ModelResult":{
+            "properties":{
+                "data":{
+                    "type":"object"
                 }
             }
         }

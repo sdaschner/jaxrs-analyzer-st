@@ -1,6 +1,6 @@
 {
   "mavenRepository": "~/.m2/repository",
-  "version": "0.13-SNAPSHOT",
+  "version": "0.15-SNAPSHOT",
   "scenarios": [
     {
       "backend": "swagger",
