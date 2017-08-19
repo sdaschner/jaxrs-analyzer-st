@@ -93,6 +93,7 @@ function generateCli(scenario) {
 
 function executeCli(command) {
     print("running standalone for ${index}");
+//    print("command: "+command);
 
     var cliOutput = $EXEC(command);
 

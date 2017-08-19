@@ -1,55 +1,78 @@
 {
   "mavenRepository": "~/.m2/repository",
-  "version": "0.15-SNAPSHOT",
+  "version": "0.16-SNAPSHOT",
   "scenarios": [
     {
       "backend": "swagger",
       "deployedDomain": "",
       "swaggerSchemes": "",
       "swaggerTagsPathOffset": "",
-      "renderSwaggerTags": "false"
+      "renderSwaggerTags": false,
+      "noInlinePrettify": false
     },
     {
       "backend": "plaintext",
       "deployedDomain": "",
       "swaggerSchemes": "",
       "swaggerTagsPathOffset": "",
-      "renderSwaggerTags": "false"
+      "renderSwaggerTags": false,
+      "noInlinePrettify": false
     },
     {
       "backend": "swagger",
       "deployedDomain": "localhost:8080/example",
       "swaggerSchemes": "https",
       "swaggerTagsPathOffset": "1",
-      "renderSwaggerTags": "true"
+      "renderSwaggerTags": true,
+      "noInlinePrettify": false
     },
     {
       "backend": "swagger",
       "deployedDomain": "localhost:8080/example",
       "swaggerSchemes": "http,https",
       "swaggerTagsPathOffset": "2",
-      "renderSwaggerTags": "true"
+      "renderSwaggerTags": true,
+      "noInlinePrettify": false
     },
     {
       "backend": "swagger",
       "deployedDomain": "localhost:8080/example",
       "swaggerSchemes": "http,https",
       "swaggerTagsPathOffset": "3",
-      "renderSwaggerTags": "true"
+      "renderSwaggerTags": true,
+      "noInlinePrettify": false
     },
     {
       "backend": "swagger",
       "deployedDomain": "localhost:8080/example",
       "swaggerSchemes": "http,https",
       "swaggerTagsPathOffset": "",
-      "renderSwaggerTags": "true"
+      "renderSwaggerTags": true,
+      "noInlinePrettify": false
     },
     {
       "backend": "asciidoc",
       "deployedDomain": "localhost:8080/example",
       "swaggerSchemes": "",
       "swaggerTagsPathOffset": "",
-      "renderSwaggerTags": "false"
+      "renderSwaggerTags": false,
+      "noInlinePrettify": false
+    },
+    {
+      "backend": "asciidoc",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": false,
+      "noInlinePrettify": true
+    },
+    {
+      "backend": "plaintext",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": false,
+      "noInlinePrettify": true
     }
   ]
 }
