@@ -42,8 +42,8 @@ _No body_ +
 ----
 [
     {
-        "id":0,
-        "name":"string"
+        "id": 0,
+        "name": "string"
     }
 ]
 ----
@@ -59,8 +59,8 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "id":0,
-    "name":"string"
+    "id": 0,
+    "name": "string"
 }
 ----
 
@@ -109,8 +109,8 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "id":0,
-    "name":"string"
+    "id": 0,
+    "name": "string"
 }
 ----
 
@@ -142,7 +142,7 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "data":{
+    "data": {
     }
 }
 ----
@@ -323,8 +323,8 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "duke":0.0,
-    "key":"string"
+    "duke": 0.0,
+    "key": "string"
 }
 ----
 
@@ -356,7 +356,7 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "key":"string"
+    "key": "string"
 }
 ----
 
@@ -378,9 +378,9 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "duke":"string",
-    "hello":"string",
-    "key":"string"
+    "duke": "string",
+    "hello": "string",
+    "key": "string"
 }
 ----
 
@@ -401,8 +401,8 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "duke":0.0,
-    "key":"string"
+    "duke": 0.0,
+    "key": "string"
 }
 ----
 
@@ -436,7 +436,7 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "key":"string"
+    "key": "string"
 }
 ----
 
@@ -460,9 +460,9 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "duke":"string",
-    "hello":"string",
-    "key":"string"
+    "duke": "string",
+    "hello": "string",
+    "key": "string"
 }
 ----
 
@@ -482,9 +482,9 @@ _No body_ +
 [source,javascript]
 ----
 {
-    "child":{
+    "child": {
     },
-    "name":"string"
+    "name": "string"
 }
 ----
 

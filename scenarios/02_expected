@@ -35,8 +35,8 @@ GET rest/test01:
    Response Body: Collection of Lcom.sebastian_daschner.project.Model01
 [
     {
-        "id":0,
-        "name":"string"
+        "id": 0,
+        "name": "string"
     }
 ]
 
@@ -46,8 +46,8 @@ PUT rest/test01:
   Content-Type: application/json
   Request Body: com.sebastian_daschner.project.Model01
 {
-    "id":0,
-    "name":"string"
+    "id": 0,
+    "name": "string"
 }
 
  Response:
@@ -86,8 +86,8 @@ GET rest/test01/{id}:
   Status Codes: 200
    Response Body: com.sebastian_daschner.project.Model01
 {
-    "id":0,
-    "name":"string"
+    "id": 0,
+    "name": "string"
 }
 
 
@@ -111,7 +111,7 @@ GET rest/test02/{id}:
   Status Codes: 200
    Response Body: com.sebastian_daschner.project.TestResources02$ModelResult
 {
-    "data":{
+    "data": {
     }
 }
 
@@ -267,8 +267,8 @@ GET rest/test05:
   Status Codes: 200
    Response Body: javax.json.Json
 {
-    "duke":0.0,
-    "key":"string"
+    "duke": 0.0,
+    "key": "string"
 }
 
 
@@ -287,7 +287,7 @@ POST rest/test05:
   Status Codes: 202
    Response Body: javax.json.Json
 {
-    "key":"string"
+    "key": "string"
 }
 
   Status Codes: 500
@@ -302,9 +302,9 @@ GET rest/test05/01:
   Status Codes: 200
    Response Body: javax.json.Json
 {
-    "duke":"string",
-    "hello":"string",
-    "key":"string"
+    "duke": "string",
+    "hello": "string",
+    "key": "string"
 }
 
 
@@ -318,8 +318,8 @@ GET rest/test06:
   Status Codes: 200
    Response Body: javax.json.Json
 {
-    "duke":0.0,
-    "key":"string"
+    "duke": 0.0,
+    "key": "string"
 }
 
 
@@ -340,7 +340,7 @@ POST rest/test06:
   Status Codes: 202
    Response Body: javax.json.Json
 {
-    "key":"string"
+    "key": "string"
 }
 
   Status Codes: 500
@@ -357,9 +357,9 @@ GET rest/test06/{id}:
   Status Codes: 200
    Response Body: javax.json.Json
 {
-    "duke":"string",
-    "hello":"string",
-    "key":"string"
+    "duke": "string",
+    "hello": "string",
+    "key": "string"
 }
 
 
@@ -372,9 +372,9 @@ GET rest/test07:
   Status Codes: 200
    Response Body: com.sebastian_daschner.project.Model03
 {
-    "child":{
+    "child": {
     },
-    "name":"string"
+    "name": "string"
 }
 
 
