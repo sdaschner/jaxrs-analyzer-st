@@ -668,7 +668,7 @@
                         "headers": {
                         },
                         "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                            "$ref": "#/definitions/JsonObject_3"
                         }
                     },
                     "500": {
@@ -693,7 +693,7 @@
                         "headers": {
                         },
                         "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                            "$ref": "#/definitions/JsonObject_4"
                         }
                     }
                 }
@@ -767,7 +767,7 @@
                         "headers": {
                         },
                         "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                            "$ref": "#/definitions/JsonObject_3"
                         }
                     },
                     "500": {
@@ -807,7 +807,7 @@
                         "headers": {
                         },
                         "schema": {
-                            "$ref": "#/definitions/JsonObject_2"
+                            "$ref": "#/definitions/JsonObject_4"
                         }
                     }
                 }
@@ -886,8 +886,21 @@
                 }
             }
         },
-        "JsonObject_2": {
+        "JsonObject_3": {
             "properties": {
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "JsonObject_4": {
+            "properties": {
+                "duke": {
+                    "type": "string"
+                },
+                "hello": {
+                    "type": "string"
+                },
                 "key": {
                     "type": "string"
                 }
