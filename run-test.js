@@ -111,6 +111,8 @@ function getBackendFileName(backend) {
             return "rest-resources.txt";
         case "asciidoc":
             return "rest-resources.adoc";
+        case "markdown":
+            return "rest-resources.md";
         default:
             throw "no known backend: " + backend;
     }

@@ -33,7 +33,7 @@ GET rest/test01:
  Response:
   Content-Type: application/json
   Status Codes: 200
-   Response Body: Collection of Lcom.sebastian_daschner.project.Model01
+   Response Body: Collection of com.sebastian_daschner.project.Model01
 [
     {
         "id": 0,

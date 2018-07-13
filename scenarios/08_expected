@@ -38,7 +38,7 @@ _No body_ +
 *Content-Type*: `application/json`
 
 ==== `200 OK`
-*Response Body*: (Collection of `Lcom.sebastian_daschner.project.Model01`)
+*Response Body*: (Collection of `com.sebastian_daschner.project.Model01`)
 
 [source,javascript]
 ----

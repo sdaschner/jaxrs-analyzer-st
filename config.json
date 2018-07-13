@@ -91,6 +91,21 @@
       "renderSwaggerTags": false,
       "noInlinePrettify": false,
       "ignoredRootResources": "com.sebastian_daschner.project.TestResources04"
+    },
+    {
+      "backend": "markdown",
+      "deployedDomain": "",
+      "noInlinePrettify": false
+    },
+    {
+      "backend": "markdown",
+      "deployedDomain": "",
+      "noInlinePrettify": true
+    },
+    {
+      "backend": "markdown",
+      "deployedDomain": "localhost:8080/example",
+      "noInlinePrettify": false
     }
   ]
 }

@@ -1,553 +1,494 @@
-= REST resources of project
+# REST resources of project
+
 0.1-SNAPSHOT
 
-== `POST rest/04`
+## `POST rest/04`
 
-=== Description: Posts a new entity.
+### Description: Posts a new entity.
 
-=== Request
+### Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Header*: `X-Info` + 
 
-== `GET rest/04/{id}`
+## `GET rest/04/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test01`
+## `GET rest/test01`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (Collection of `com.sebastian_daschner.project.Model01`)
 
-[source,javascript]
-----
-[
-    {
-        "id": 0,
-        "name": "string"
-    }
-]
-----
+```javascript
+[{"id":0,"name":"string"}]
+```
 
 
 
-== `PUT rest/test01`
+## `PUT rest/test01`
 
-=== Request
+### Request
 *Content-Type*: `application/json` + 
 *Request Body*: (`com.sebastian_daschner.project.Model01`)
 
-[source,javascript]
-----
-{
-    "id": 0,
-    "name": "string"
-}
-----
+```javascript
+{"id":0,"name":"string"}
+```
 
 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `202 Accepted`
+#### `202 Accepted`
 
-== `POST rest/test01`
+## `POST rest/test01`
 
-=== Request
+### Request
 *Content-Type*: `application/json` + 
 *Request Body*: (`java.lang.String`)
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `201 Created`
+#### `201 Created`
 *Header*: `Location` + 
 
-== `GET rest/test01/01`
+## `GET rest/test01/01`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `text/plain`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test01/{id}`
+## `GET rest/test01/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`com.sebastian_daschner.project.Model01`)
 
-[source,javascript]
-----
-{
-    "id": 0,
-    "name": "string"
-}
-----
+```javascript
+{"id":0,"name":"string"}
+```
 
 
 
-== `DELETE rest/test01/{id}`
+## `DELETE rest/test01/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `204 No Content`
+#### `204 No Content`
 
-== `GET rest/test02/{id}`
+## `GET rest/test02/{id}`
 
-=== Description: Returns the model result.
+### Description: Returns the model result.
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`com.sebastian_daschner.project.TestResources02$ModelResult`)
 
-[source,javascript]
-----
-{
-    "data": {
-    }
-}
-----
+```javascript
+{"data":{}}
+```
 
 
 
-== `DELETE rest/test02/{id}`
+## `DELETE rest/test02/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `204 No Content`
+#### `204 No Content`
 
-==== `404 Not Found`
+#### `404 Not Found`
 *Header*: `X-Message` + 
 
-==== `500 Internal Server Error`
+#### `500 Internal Server Error`
 
-== `DELETE rest/test02/{id}/01`
+## `DELETE rest/test02/{id}/01`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 *Query Param*: `query`, `int` + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `204 No Content`
+#### `204 No Content`
 
-== `GET rest/test03`
+## `GET rest/test03`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (Collection of `java.lang.String`)
 
-[source,javascript]
-----
-[
-    "string"
-]
-----
+```javascript
+["string"]
+```
 
 
 
-== `GET rest/test03/01`
+## `GET rest/test03/01`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test03/02`
+## `GET rest/test03/02`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `application/json`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `POST rest/test03/03`
+## `POST rest/test03/03`
 
-=== Description: Posts a new entity.
+### Description: Posts a new entity.
 
-=== Request
+### Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Header*: `X-Info` + 
 
-== `GET rest/test03/03/{id}`
+## `GET rest/test03/03/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `POST rest/test03/04`
+## `POST rest/test03/04`
 
-=== Description: Posts a new entity.
+### Description: Posts a new entity.
 
-=== Request
+### Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Header*: `X-Info` + 
 
-== `GET rest/test03/04/{id}`
+## `GET rest/test03/04/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `POST rest/test03/05`
+## `POST rest/test03/05`
 
-=== Description: Posts a new entity.
+### Description: Posts a new entity.
 
-=== Request
+### Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Header*: `X-Info` + 
 
-== `GET rest/test03/05/{id}`
+## `GET rest/test03/05/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test03/{id}`
+## `GET rest/test03/{id}`
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Header*: `X-Info` + 
 
-== `GET rest/test05`
+## `GET rest/test05`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "duke": 0.0,
-    "key": "string"
-}
-----
+```javascript
+{"duke":0.0,"key":"string"}
+```
 
 
 
-== `POST rest/test05`
+## `POST rest/test05`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-[
-    "string"
-]
-----
+```javascript
+["string"]
+```
 
 
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "key": "string"
-}
-----
+```javascript
+{"key":"string"}
+```
 
 
 
-==== `500 Internal Server Error`
+#### `500 Internal Server Error`
 
-== `GET rest/test05/01`
+## `GET rest/test05/01`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "duke": "string",
-    "hello": "string",
-    "key": "string"
-}
-----
+```javascript
+{"duke":"string","hello":"string","key":"string"}
+```
 
 
 
-== `GET rest/test06`
+## `GET rest/test06`
 
-=== Description: Gets a test.
+### Description: Gets a test.
 
-=== Request
+### Request
 _No body_ + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "duke": 0.0,
-    "key": "string"
-}
-----
+```javascript
+{"duke":0.0,"key":"string"}
+```
 
 
 
-== `POST rest/test06`
+## `POST rest/test06`
 
-=== Description: Creates a new test
+### Description: Creates a new test
 
-=== Request
+### Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`javax.json.JsonObject`)
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-[
-    "string"
-]
-----
+```javascript
+["string"]
+```
 
 
 
-==== `202 Accepted`
+#### `202 Accepted`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "key": "string"
-}
-----
+```javascript
+{"key":"string"}
+```
 
 
 
-==== `500 Internal Server Error`
+#### `500 Internal Server Error`
 
-== `GET rest/test06/{id}`
+## `GET rest/test06/{id}`
 
-=== Description: Returns a sub test.
+### Description: Returns a sub test.
 
-=== Request
+### Request
 _No body_ + 
 *Path Param*: `id`, `long` + 
 *Query Param*: `query`, `java.lang.String` + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`javax.json.Json`)
 
-[source,javascript]
-----
-{
-    "duke": "string",
-    "hello": "string",
-    "key": "string"
-}
-----
+```javascript
+{"duke":"string","hello":"string","key":"string"}
+```
 
 
 
-== `GET rest/test07`
+## `GET rest/test07`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`com.sebastian_daschner.project.Model03`)
 
-[source,javascript]
-----
-{
-    "child": {
-    },
-    "name": "string",
-    "type": "OTHER|VALUE_01|VALUE_02"
-}
-----
+```javascript
+{"child":{},"name":"string","type":"OTHER|VALUE_01|VALUE_02"}
+```
 
 
 
-== `GET rest/test07/01`
+## `GET rest/test07/01`
 
-=== Description: Returns something.
+### Description: Returns something.
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test07/02`
+## `GET rest/test07/02`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (`java.lang.String`)
 
-== `GET rest/test07/enums`
+## `GET rest/test07/enums`
 
-=== Request
+### Request
 _No body_ + 
 
-=== Response
+### Response
 *Content-Type*: `\*/*`
 
-==== `200 OK`
+#### `200 OK`
 *Response Body*: (Collection of `com.sebastian_daschner.project.Enum01`)
 
-[source,javascript]
-----
-[
-    "OTHER|VALUE_01|VALUE_02"
-]
-----
+```javascript
+["OTHER|VALUE_01|VALUE_02"]
+```
 
 
 
