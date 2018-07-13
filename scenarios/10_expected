@@ -1,0 +1,773 @@
+
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "0.1-SNAPSHOT",
+        "title": "project"
+    },
+    "host": "",
+    "basePath": "/project/rest",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/04": {
+            "post": {
+                "description": "Posts a new entity.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The entity"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                            "X-Info": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/04/{id}": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test02/{id}": {
+            "get": {
+                "description": "Returns the model result.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The path param"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/TestResources02$ModelResult"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content",
+                        "headers": {
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "headers": {
+                            "X-Message": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "headers": {
+                        }
+                    }
+                }
+            }
+        },
+        "/test02/{id}/01": {
+            "delete": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content",
+                        "headers": {
+                        }
+                    }
+                }
+            }
+        },
+        "/test03": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/01": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/02": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/03": {
+            "post": {
+                "description": "Posts a new entity.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The entity"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                            "X-Info": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/03/{id}": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/04": {
+            "post": {
+                "description": "Posts a new entity.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The entity"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                            "X-Info": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/04/{id}": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/05": {
+            "post": {
+                "description": "Posts a new entity.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The entity"
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                            "X-Info": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/05/{id}": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test03/{id}": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                            "X-Info": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/test05": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject_3"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "headers": {
+                        }
+                    }
+                }
+            }
+        },
+        "/test05/01": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject_4"
+                        }
+                    }
+                }
+            }
+        },
+        "/test06": {
+            "get": {
+                "description": "Gets a test.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "description": "Query param to filter."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Creates a new test",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "description": "Query param to filter."
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        },
+                        "description": "The body with parameters"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "202": {
+                        "description": "Accepted",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject_3"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "headers": {
+                        }
+                    }
+                }
+            }
+        },
+        "/test06/{id}": {
+            "get": {
+                "description": "Returns a sub test.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "The sub identifier"
+                    },
+                    {
+                        "type": "string",
+                        "name": "query",
+                        "in": "query",
+                        "required": true,
+                        "description": "Query param to filter."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/JsonObject_4"
+                        }
+                    }
+                }
+            }
+        },
+        "/test07": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "$ref": "#/definitions/Model03"
+                        }
+                    }
+                }
+            }
+        },
+        "/test07/01": {
+            "get": {
+                "description": "Returns something.",
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/test07/02": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "JsonObject": {
+            "properties": {
+                "duke": {
+                    "type": "number"
+                },
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "JsonObject_3": {
+            "properties": {
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "JsonObject_4": {
+            "properties": {
+                "duke": {
+                    "type": "string"
+                },
+                "hello": {
+                    "type": "string"
+                },
+                "key": {
+                    "type": "string"
+                }
+            }
+        },
+        "Model03": {
+            "properties": {
+                "child": {
+                    "$ref": "#/definitions/Model03"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "TestResources02$ModelResult": {
+            "properties": {
+                "data": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

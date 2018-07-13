@@ -3,6 +3,8 @@
 
 == `POST rest/04`
 
+=== Description: Posts a new entity.
+
 === Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
@@ -129,6 +131,8 @@ _No body_ +
 
 == `GET rest/test02/{id}`
 
+=== Description: Returns the model result.
+
 === Request
 _No body_ + 
 *Path Param*: `id`, `java.lang.String` + 
@@ -221,6 +225,8 @@ _No body_ +
 
 == `POST rest/test03/03`
 
+=== Description: Posts a new entity.
+
 === Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
@@ -247,6 +253,8 @@ _No body_ +
 
 == `POST rest/test03/04`
 
+=== Description: Posts a new entity.
+
 === Request
 *Content-Type*: `\*/*` + 
 *Request Body*: (`java.lang.String`)
@@ -272,6 +280,8 @@ _No body_ +
 *Response Body*: (`java.lang.String`)
 
 == `POST rest/test03/05`
+
+=== Description: Posts a new entity.
 
 === Request
 *Content-Type*: `\*/*` + 
@@ -388,6 +398,8 @@ _No body_ +
 
 == `GET rest/test06`
 
+=== Description: Gets a test.
+
 === Request
 _No body_ + 
 *Query Param*: `query`, `java.lang.String` + 
@@ -409,6 +421,8 @@ _No body_ +
 
 
 == `POST rest/test06`
+
+=== Description: Creates a new test
 
 === Request
 *Content-Type*: `\*/*` + 
@@ -445,6 +459,8 @@ _No body_ +
 ==== `500 Internal Server Error`
 
 == `GET rest/test06/{id}`
+
+=== Description: Returns a sub test.
 
 === Request
 _No body_ + 
@@ -491,6 +507,8 @@ _No body_ +
 
 
 == `GET rest/test07/01`
+
+=== Description: Returns something.
 
 === Request
 _No body_ + 

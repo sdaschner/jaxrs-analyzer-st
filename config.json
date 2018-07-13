@@ -73,6 +73,24 @@
       "swaggerTagsPathOffset": "",
       "renderSwaggerTags": false,
       "noInlinePrettify": true
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": false,
+      "noInlinePrettify": false,
+      "ignoredRootResources": "com.sebastian_daschner.project.TestResources01"
+    },
+    {
+      "backend": "swagger",
+      "deployedDomain": "",
+      "swaggerSchemes": "",
+      "swaggerTagsPathOffset": "",
+      "renderSwaggerTags": false,
+      "noInlinePrettify": false,
+      "ignoredRootResources": "com.sebastian_daschner.project.TestResources04"
     }
   ]
 }
