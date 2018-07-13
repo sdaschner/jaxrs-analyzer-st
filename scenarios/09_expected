@@ -341,7 +341,7 @@ GET rest/test07:
   Content-Type: */*
   Status Codes: 200
    Response Body: com.sebastian_daschner.project.Model03
-    {"child":{},"name":"string"}
+    {"child":{},"name":"string","type":"OTHER|VALUE_01|VALUE_02"}
 
 
 GET rest/test07/01:
@@ -363,5 +363,16 @@ GET rest/test07/02:
   Content-Type: */*
   Status Codes: 200
    Response Body: java.lang.String
+
+
+GET rest/test07/enums:
+ Request:
+  No body
+
+ Response:
+  Content-Type: */*
+  Status Codes: 200
+   Response Body: Collection of com.sebastian_daschner.project.Enum01
+    ["OTHER|VALUE_01|VALUE_02"]
 
 

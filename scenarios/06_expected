@@ -984,6 +984,37 @@
                     "test07"
                 ]
             }
+        },
+        "/test07/enums": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "OTHER",
+                                    "VALUE_01",
+                                    "VALUE_02"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "test07"
+                ]
+            }
         }
     },
     "definitions": {
@@ -1044,6 +1075,14 @@
                 },
                 "name": {
                     "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "OTHER",
+                        "VALUE_01",
+                        "VALUE_02"
+                    ]
                 }
             }
         },

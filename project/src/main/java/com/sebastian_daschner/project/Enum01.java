@@ -19,34 +19,8 @@ package com.sebastian_daschner.project;
 /**
  * These sources are solely used for test purposes and not meant for deployment.
  */
-public class Model03 {
+public enum Enum01 {
 
-    private String name;
-    private Model03 child;
-    private Enum01 type;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(final String name) {
-        this.name = name;
-    }
-
-    public Model03 getChild() {
-        return child;
-    }
-
-    public void setChild(final Model03 child) {
-        this.child = child;
-    }
-
-    public Enum01 getType() {
-        return type;
-    }
-
-    public void setType(final Enum01 type) {
-        this.type = type;
-    }
+    VALUE_01, VALUE_02, OTHER
 
 }

@@ -25,6 +25,9 @@
         },
         {
             "name": "05"
+        },
+        {
+            "name": "enums"
         }
     ],
     "paths": {
@@ -923,6 +926,37 @@
                     "02"
                 ]
             }
+        },
+        "/test07/enums": {
+            "get": {
+                "consumes": [
+                ],
+                "produces": [
+                ],
+                "parameters": [
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {
+                        },
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "enum": [
+                                    "OTHER",
+                                    "VALUE_01",
+                                    "VALUE_02"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "enums"
+                ]
+            }
         }
     },
     "definitions": {
@@ -983,6 +1017,14 @@
                 },
                 "name": {
                     "type": "string"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "OTHER",
+                        "VALUE_01",
+                        "VALUE_02"
+                    ]
                 }
             }
         },

@@ -16,10 +16,13 @@
 
 package com.sebastian_daschner.project;
 
+import java.util.List;
+import java.util.ArrayList;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.container.ResourceContext;
 import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
 
 /**
  * These sources are solely used for test purposes and not meant for deployment.
@@ -36,6 +39,13 @@ public class TestResources07 {
         model03.setChild(new Model03());
         model03.setName("foo");
         return model03;
+    }
+
+    @GET
+    @Path("/enums")
+    public Response getEnums() {
+        List<Enum01> enums = new ArrayList<>();
+        return Response.ok(enums).build();
     }
 
     /**

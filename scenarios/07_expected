@@ -500,7 +500,8 @@ _No body_ +
 {
     "child": {
     },
-    "name": "string"
+    "name": "string",
+    "type": "OTHER|VALUE_01|VALUE_02"
 }
 ----
 
@@ -529,4 +530,24 @@ _No body_ +
 
 ==== `200 OK`
 *Response Body*: (`java.lang.String`)
+
+== `GET rest/test07/enums`
+
+=== Request
+_No body_ + 
+
+=== Response
+*Content-Type*: `\*/*`
+
+==== `200 OK`
+*Response Body*: (Collection of `com.sebastian_daschner.project.Enum01`)
+
+[source,javascript]
+----
+[
+    "OTHER|VALUE_01|VALUE_02"
+]
+----
+
+
 
